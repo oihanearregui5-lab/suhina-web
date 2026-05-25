@@ -1,0 +1,144 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@1,144,400;1,144,500&display=swap');
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-display: 'Anton', 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-serif: 'Fraunces', 'Georgia', serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Suhina brand tokens */
+  --color-anthracite: var(--anthracite);
+  --color-anthracite-deep: var(--anthracite-deep);
+  --color-anthracite-soft: var(--anthracite-soft);
+  --color-suhina-yellow: var(--suhina-yellow);
+  --color-suhina-yellow-deep: var(--suhina-yellow-deep);
+  --color-whatsapp: var(--whatsapp);
+  --color-bone: var(--bone);
+}
+
+:root {
+  --radius: 0.25rem;
+
+  /* Brand */
+  --anthracite: oklch(0.235 0.005 270);          /* #1F2024 chapa furgo */
+  --anthracite-deep: oklch(0.165 0.005 270);     /* deeper black for contrast bands */
+  --anthracite-soft: oklch(0.30 0.006 270);
+  --suhina-yellow: oklch(0.85 0.175 90);         /* #F5C518 amarillo señalético */
+  --suhina-yellow-deep: oklch(0.78 0.175 85);
+  --whatsapp: oklch(0.72 0.18 145);              /* #25D366 */
+  --bone: oklch(0.975 0.005 90);
+
+  --background: var(--bone);
+  --foreground: var(--anthracite);
+  --card: oklch(1 0 0);
+  --card-foreground: var(--anthracite);
+  --popover: oklch(1 0 0);
+  --popover-foreground: var(--anthracite);
+  --primary: var(--anthracite);
+  --primary-foreground: var(--bone);
+  --secondary: oklch(0.94 0.004 90);
+  --secondary-foreground: var(--anthracite);
+  --muted: oklch(0.95 0.004 90);
+  --muted-foreground: oklch(0.45 0.005 270);
+  --accent: var(--suhina-yellow);
+  --accent-foreground: var(--anthracite);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.984 0 0);
+  --border: oklch(0.9 0.005 90);
+  --input: oklch(0.9 0.005 90);
+  --ring: var(--suhina-yellow);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: 'ss01', 'cv11';
+  }
+  ::selection {
+    background-color: var(--color-suhina-yellow);
+    color: var(--color-anthracite);
+  }
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: var(--color-anthracite); }
+  ::-webkit-scrollbar-thumb { background: var(--color-suhina-yellow); border-radius: 0; }
+}
+
+/* Chevron pattern — la firma visual de la furgo */
+.chevron-band {
+  background-color: var(--color-anthracite);
+  background-image: repeating-linear-gradient(
+    -55deg,
+    var(--color-suhina-yellow) 0,
+    var(--color-suhina-yellow) 18px,
+    var(--color-anthracite) 18px,
+    var(--color-anthracite) 36px
+  );
+}
+
+.chevron-soft {
+  background-image: repeating-linear-gradient(
+    -55deg,
+    color-mix(in oklab, var(--color-suhina-yellow) 18%, transparent) 0,
+    color-mix(in oklab, var(--color-suhina-yellow) 18%, transparent) 14px,
+    transparent 14px,
+    transparent 32px
+  );
+}
+
+.display { font-family: var(--font-display); letter-spacing: 0.005em; }
+.serif-italic { font-family: var(--font-serif); font-style: italic; font-weight: 400; }
+
+.ticker-track {
+  animation: ticker 40s linear infinite;
+}
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.pulse-dot {
+  animation: pulse-dot 1.6s ease-in-out infinite;
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
