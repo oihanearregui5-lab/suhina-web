@@ -1,0 +1,13 @@
+# Suhina - configuración Apache para sitio estático (SPA)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Si la petición es un archivo o carpeta real, servirlo tal cual
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # En cualquier otro caso, servir index.html (navegación interna y enlaces directos)
+  RewriteRule ^ /index.html [L]
+</IfModule>
