@@ -29,13 +29,11 @@ jobs:
       - name: Añadir .htaccess al build
         run: cp deploy/.htaccess dist/client/.htaccess
 
-      - name: Subir por FTP a /www
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - - name: Subir por FTP a /www
+        uses: sebastianpopp/ftp-action@releases/v2
         with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USERNAME }}
+          host: ${{ secrets.FTP_HOST }}
+          user: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
-          port: 21
-          local-dir: ./dist/client/
-          server-dir: /www/
+          localDir: "dist/client"
+          remoteDir: "www"
