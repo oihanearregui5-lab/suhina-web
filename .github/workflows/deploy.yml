@@ -3,7 +3,7 @@ name: Deploy suhina.es (FTP)
 on:
   push:
     branches: [main]
-  workflow_dispatch:   # permite lanzarlo a mano desde la pestaña Actions
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
@@ -29,7 +29,7 @@ jobs:
       - name: Añadir .htaccess al build
         run: cp deploy/.htaccess dist/client/.htaccess
 
-      - - name: Subir por FTP a /www
+      - name: Subir por FTP a /www
         uses: sebastianpopp/ftp-action@releases/v2
         with:
           host: ${{ secrets.FTP_HOST }}
