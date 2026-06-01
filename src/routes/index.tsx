@@ -6,6 +6,7 @@ import { ProductGallery } from "@/components/ProductGallery";
 import { TrustBar } from "@/components/TrustBar";
 import { Services } from "@/components/Services";
 import { Process } from "@/components/Process";
+import { CostOfDowntime } from "@/components/CostOfDowntime";
 import { About } from "@/components/About";
 import { Stats } from "@/components/Stats";
 import { WhyUs } from "@/components/WhyUs";
@@ -42,6 +43,7 @@ function Index() {
       <Services />
       <ChevronBand />
       <Process />
+      <CostOfDowntime />
       <About />
       <Stats />
       <WhyUs />
