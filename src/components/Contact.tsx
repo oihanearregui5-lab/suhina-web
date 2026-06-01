@@ -1,9 +1,11 @@
 import { Phone, MessageCircle, Mail, Clock, ArrowRight } from "lucide-react";
 
 const items = [
-  { icon: Phone, label: "Teléfono", value: "699 05 41 97" },
-  { icon: MessageCircle, label: "WhatsApp", value: "699 05 41 97" },
-  { icon: Mail, label: "Email", value: "info@suhina.es" },
+  { icon: Phone, label: "Taller", value: "678 47 84 92", href: "tel:+34678478492" },
+  { icon: Mail, label: "Email taller", value: "info@suhina.es", href: "mailto:info@suhina.es" },
+  { icon: Phone, label: "Oficina", value: "618 63 46 58", href: "tel:+34618634658" },
+  { icon: Mail, label: "Administración", value: "administracion@suhina.es", href: "mailto:administracion@suhina.es" },
+  { icon: MessageCircle, label: "WhatsApp", value: "678 47 84 92", href: "https://wa.me/34678478492" },
   { icon: Clock, label: "Horario", value: "24h / 7 días" },
 ];
 
@@ -24,14 +26,18 @@ export function Contact() {
           </p>
 
           <ul className="mt-10 space-y-5">
-            {items.map(({ icon: Icon, label, value }) => (
+            {items.map(({ icon: Icon, label, value, href }) => (
               <li key={label} className="flex items-start gap-4">
                 <span className="bg-suhina-yellow text-anthracite p-2.5">
                   <Icon className="h-5 w-5" strokeWidth={1.8} />
                 </span>
                 <div>
                   <p className="text-xs uppercase tracking-wider text-anthracite/55 font-bold">{label}</p>
-                  <p className="text-anthracite font-bold text-lg">{value}</p>
+                  {href ? (
+                    <a href={href} className="text-anthracite font-bold text-lg hover:text-suhina-yellow-deep transition-colors">{value}</a>
+                  ) : (
+                    <p className="text-anthracite font-bold text-lg">{value}</p>
+                  )}
                 </div>
               </li>
             ))}

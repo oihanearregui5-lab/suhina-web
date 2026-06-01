@@ -46,10 +46,10 @@ export function Nav() {
         </nav>
         <div className="flex items-center gap-3">
           <a
-            href="tel:+34699054197"
+            href="tel:+34678478492"
             className="hidden md:inline-flex items-center gap-2 bg-suhina-yellow text-anthracite px-5 py-3 font-bold tracking-tight rounded-md hover:bg-suhina-yellow-deep transition-colors"
           >
-            <Phone className="h-4 w-4" /> 699 05 41 97
+            <Phone className="h-4 w-4" /> 678 47 84 92
           </a>
           <button
             onClick={() => setOpen(true)}
@@ -85,10 +85,10 @@ export function Nav() {
               </a>
             ))}
             <a
-              href="tel:+34699054197"
+              href="tel:+34678478492"
               className="mt-8 inline-flex items-center justify-center gap-2 bg-suhina-yellow text-anthracite px-5 py-4 font-bold rounded-md"
             >
-              <Phone className="h-4 w-4" /> 699 05 41 97
+              <Phone className="h-4 w-4" /> 678 47 84 92
             </a>
           </nav>
         </div>

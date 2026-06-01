@@ -19,7 +19,7 @@ export function Products() {
             mangueras y mucho más. Si necesitas algo concreto ahora, escríbenos y te lo conseguimos.
           </p>
           <a
-            href="https://wa.me/34699054197"
+            href="https://wa.me/34678478492"
             className="mt-10 inline-flex items-center gap-3 bg-whatsapp text-white px-6 py-4 font-bold text-sm uppercase tracking-tight rounded-md hover:opacity-90 transition-opacity"
           >
             <MessageCircle className="h-4 w-4" />

@@ -17,10 +17,10 @@ export function CTAFinal() {
           Llámanos, escríbenos o rellena el formulario. Te contactamos en menos de 1 hora en horario laboral.
         </p>
         <div className="mt-10 flex flex-wrap gap-3 justify-center">
-          <a href="tel:+34699054197" className="inline-flex items-center gap-3 bg-suhina-yellow text-anthracite px-7 py-5 font-bold uppercase tracking-tight rounded-md hover:bg-suhina-yellow-deep transition-colors">
-            <Phone className="h-5 w-5" /> Llámanos · 699 05 41 97
+          <a href="tel:+34678478492" className="inline-flex items-center gap-3 bg-suhina-yellow text-anthracite px-7 py-5 font-bold uppercase tracking-tight rounded-md hover:bg-suhina-yellow-deep transition-colors">
+            <Phone className="h-5 w-5" /> Llámanos · 678 47 84 92
           </a>
-          <a href="https://wa.me/34699054197" className="inline-flex items-center gap-3 bg-whatsapp text-white px-7 py-5 font-bold uppercase tracking-tight rounded-md hover:opacity-90 transition-opacity">
+          <a href="https://wa.me/34678478492" className="inline-flex items-center gap-3 bg-whatsapp text-white px-7 py-5 font-bold uppercase tracking-tight rounded-md hover:opacity-90 transition-opacity">
             <MessageCircle className="h-5 w-5" /> WhatsApp
           </a>
         </div>

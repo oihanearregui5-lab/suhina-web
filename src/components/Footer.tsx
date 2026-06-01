@@ -32,9 +32,11 @@ export function Footer() {
         <div>
           <h4 className="text-xs uppercase tracking-[0.2em] font-bold text-suhina-yellow">Contacto</h4>
           <ul className="mt-5 space-y-3 text-white/70 text-sm">
-            <li className="flex items-center gap-2"><Phone className="h-4 w-4 text-suhina-yellow" /> 699 05 41 97</li>
-            <li className="flex items-center gap-2"><MessageCircle className="h-4 w-4 text-suhina-yellow" /> WhatsApp</li>
+            <li className="flex items-center gap-2"><Phone className="h-4 w-4 text-suhina-yellow" /> Taller · 678 47 84 92</li>
+            <li className="flex items-center gap-2"><Phone className="h-4 w-4 text-suhina-yellow" /> Oficina · 618 63 46 58</li>
+            <li className="flex items-center gap-2"><MessageCircle className="h-4 w-4 text-suhina-yellow" /> WhatsApp · 678 47 84 92</li>
             <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-suhina-yellow" /> info@suhina.es</li>
+            <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-suhina-yellow" /> administracion@suhina.es</li>
           </ul>
         </div>
 
