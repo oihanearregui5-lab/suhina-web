@@ -19,8 +19,8 @@ export function Hero() {
           className="inline-flex self-start items-center gap-2 bg-suhina-yellow text-anthracite px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em]"
         >
           <span className="relative flex h-2 w-2">
-            <span className="absolute inset-0 rounded-full bg-anthracite pulse-dot" />
-            <span className="relative rounded-full bg-anthracite h-2 w-2" />
+            <span className="absolute inset-0 rounded-full bg-whatsapp pulse-dot" />
+            <span className="relative rounded-full bg-whatsapp h-2 w-2" />
           </span>
           Disponibles ahora · 24/7 en Navarra
         </motion.div>
@@ -54,14 +54,14 @@ export function Hero() {
           className="mt-8 flex flex-wrap gap-3"
         >
           <a
-            href="tel:+34678478492"
+            href="tel:+34699054197"
             className="inline-flex items-center gap-3 bg-suhina-yellow text-anthracite px-6 py-4 font-bold text-sm lg:text-base uppercase tracking-tight rounded-md hover:bg-suhina-yellow-deep transition-colors"
           >
             <Phone className="h-4 w-4" />
-            Llámanos · 678 47 84 92
+            Llámanos · 699 05 41 97
           </a>
           <a
-            href="https://wa.me/34678478492"
+            href="https://wa.me/34699054197"
             className="inline-flex items-center gap-3 bg-whatsapp text-white px-6 py-4 font-bold text-sm lg:text-base uppercase tracking-tight rounded-md hover:opacity-90 transition-opacity"
           >
             <MessageCircle className="h-4 w-4" />
