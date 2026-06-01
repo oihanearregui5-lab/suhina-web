@@ -72,14 +72,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Suhina · Reparación de latiguillos hidráulicos en Navarra · 24/7" },
+      { name: "description", content: "Reparación y fabricación de latiguillos hidráulicos a pie de máquina en toda Navarra. Servicio 24/7, respuesta en menos de 30 min." },
+      { name: "author", content: "Suhina" },
+      { property: "og:title", content: "Suhina · Reparación de latiguillos hidráulicos en Navarra · 24/7" },
+      { property: "og:description", content: "Reparación y fabricación de latiguillos hidráulicos a pie de máquina en toda Navarra. Servicio 24/7, respuesta en menos de 30 min." },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { property: "og:url", content: "https://suhina.es" },
+      { property: "og:image", content: "https://suhina.es/og-image.jpg" },
+      { property: "og:locale", content: "es_ES" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Suhina · Reparación de latiguillos hidráulicos en Navarra · 24/7" },
+      { name: "twitter:description", content: "Reparación y fabricación de latiguillos hidráulicos a pie de máquina en toda Navarra. Servicio 24/7, respuesta en menos de 30 min." },
+      { name: "twitter:image", content: "https://suhina.es/og-image.jpg" },
     ],
     links: [
       {
@@ -96,7 +101,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="es">
       <head>
         <HeadContent />
       </head>
