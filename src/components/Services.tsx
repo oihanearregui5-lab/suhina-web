@@ -40,7 +40,7 @@ export function Services() {
               <h3 className="display mt-6 text-xl uppercase tracking-tight text-anthracite">{title}</h3>
               <p className="mt-2 text-anthracite/65 text-sm leading-relaxed">{desc}</p>
               <a href="#contacto" className="mt-6 inline-flex items-center gap-2 text-suhina-yellow font-bold text-sm uppercase tracking-wider">
-                Saber más <ArrowRight className="h-4 w-4" />
+                Solicitar asistencia <ArrowRight className="h-4 w-4" />
               </a>
             </motion.div>
           ))}
