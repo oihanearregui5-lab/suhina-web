@@ -54,14 +54,14 @@ export function Hero() {
           className="mt-8 flex flex-wrap gap-3"
         >
           <a
-            href="tel:+34699054197"
+            href="tel:+34678478492"
             className="inline-flex items-center gap-3 bg-suhina-yellow text-anthracite px-6 py-4 font-bold text-sm lg:text-base uppercase tracking-tight rounded-md hover:bg-suhina-yellow-deep transition-colors"
           >
             <Phone className="h-4 w-4" />
-            Llámanos · 699 05 41 97
+            Llámanos · 678 47 84 92
           </a>
           <a
-            href="https://wa.me/34699054197"
+            href="https://wa.me/34678478492"
             className="inline-flex items-center gap-3 bg-whatsapp text-white px-6 py-4 font-bold text-sm lg:text-base uppercase tracking-tight rounded-md hover:opacity-90 transition-opacity"
           >
             <MessageCircle className="h-4 w-4" />
