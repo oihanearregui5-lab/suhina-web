@@ -77,7 +77,7 @@ export function Contact() {
           </ul>
         </div>
 
-        <form className="space-y-6" onSubmit={handleSubmit}>
+        <form className="space-y-6 lg:mt-12" onSubmit={handleSubmit}>
           <Field label="Nombre" name="name" type="text" value={form.name} onChange={update("name")} />
           <Field label="Teléfono" name="phone" type="tel" value={form.phone} onChange={update("phone")} />
           <Field label="Email" name="email" type="email" value={form.email} onChange={update("email")} />
