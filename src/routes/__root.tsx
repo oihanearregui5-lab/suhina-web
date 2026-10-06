@@ -15,7 +15,9 @@ function NotFoundComponent() {
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
         <h1 className="text-7xl font-bold text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
+        <h2 className="mt-4 text-xl font-semibold text-foreground">
+          Page not found
+        </h2>
         <p className="mt-2 text-sm text-muted-foreground">
           The page you're looking for doesn't exist or has been moved.
         </p>
@@ -32,7 +34,13 @@ function NotFoundComponent() {
   );
 }
 
-function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
+function ErrorComponent({
+  error,
+  reset,
+}: {
+  error: Error;
+  reset: () => void;
+}) {
   console.error(error);
   const router = useRouter();
 
@@ -43,7 +51,8 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
           This page didn't load
         </h1>
         <p className="mt-2 text-sm text-muted-foreground">
-          Something went wrong on our end. You can try refreshing or head back home.
+          Something went wrong on our end. You can try refreshing or head back
+          home.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <button
@@ -67,41 +76,94 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   );
 }
 
-export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
-  head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Suhina · Reparación de latiguillos hidráulicos en Navarra · 24/7" },
-      { name: "description", content: "Reparación y fabricación de latiguillos hidráulicos a pie de máquina en toda Navarra. Servicio 24/7, respuesta en menos de 30 min." },
-      { name: "author", content: "Suhina" },
-      { property: "og:title", content: "Suhina · Reparación de latiguillos hidráulicos en Navarra · 24/7" },
-      { property: "og:description", content: "Reparación y fabricación de latiguillos hidráulicos a pie de máquina en toda Navarra. Servicio 24/7, respuesta en menos de 30 min." },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://suhina.es" },
-      { property: "og:image", content: "https://suhina.es/og-image.jpg" },
-      { property: "og:locale", content: "es_ES" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Suhina · Reparación de latiguillos hidráulicos en Navarra · 24/7" },
-      { name: "twitter:description", content: "Reparación y fabricación de latiguillos hidráulicos a pie de máquina en toda Navarra. Servicio 24/7, respuesta en menos de 30 min." },
-      { name: "twitter:image", content: "https://suhina.es/og-image.jpg" },
-    ],
-    links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
-      { rel: "icon", href: "/favicon.ico", sizes: "any" },
-      { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" },
-      { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.png" },
-      { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
-    ],
-  }),
-  shellComponent: RootShell,
-  component: RootComponent,
-  notFoundComponent: NotFoundComponent,
-  errorComponent: ErrorComponent,
-});
+export const Route =
+  createRootRouteWithContext<{ queryClient: QueryClient }>()({
+    head: () => ({
+      meta: [
+        { charSet: "utf-8" },
+        {
+          name: "viewport",
+          content: "width=device-width, initial-scale=1",
+        },
+        {
+          title:
+            "Suhina · Reparación de latiguillos hidráulicos en Navarra · 24/7",
+        },
+        {
+          name: "description",
+          content:
+            "Reparación y fabricación de latiguillos hidráulicos a pie de máquina en toda Navarra. Servicio 24/7, respuesta en menos de 30 min.",
+        },
+        { name: "author", content: "Suhina" },
+        {
+          property: "og:title",
+          content:
+            "Suhina · Reparación de latiguillos hidráulicos en Navarra · 24/7",
+        },
+        {
+          property: "og:description",
+          content:
+            "Reparación y fabricación de latiguillos hidráulicos a pie de máquina en toda Navarra. Servicio 24/7, respuesta en menos de 30 min.",
+        },
+        { property: "og:type", content: "website" },
+        { property: "og:url", content: "https://suhina.es" },
+        {
+          property: "og:image",
+          content: "https://suhina.es/og-image.jpg",
+        },
+        { property: "og:locale", content: "es_ES" },
+        { name: "twitter:card", content: "summary_large_image" },
+        {
+          name: "twitter:title",
+          content:
+            "Suhina · Reparación de latiguillos hidráulicos en Navarra · 24/7",
+        },
+        {
+          name: "twitter:description",
+          content:
+            "Reparación y fabricación de latiguillos hidráulicos a pie de máquina en toda Navarra. Servicio 24/7, respuesta en menos de 30 min.",
+        },
+        {
+          name: "twitter:image",
+          content: "https://suhina.es/og-image.jpg",
+        },
+      ],
+      links: [
+        {
+          rel: "stylesheet",
+          href: appCss,
+        },
+        { rel: "icon", href: "/favicon.ico", sizes: "any" },
+        {
+          rel: "icon",
+          type: "image/png",
+          sizes: "32x32",
+          href: "/favicon-32x32.png",
+        },
+        {
+          rel: "icon",
+          type: "image/png",
+          sizes: "48x48",
+          href: "/favicon-48x48.png",
+        },
+        {
+          rel: "icon",
+          type: "image/png",
+          sizes: "16x16",
+          href: "/favicon-16x16.png",
+        },
+        {
+          rel: "apple-touch-icon",
+          sizes: "180x180",
+          href: "/apple-touch-icon.png",
+        },
+      ],
+    }),
+    shellComponent: RootShell,
+    component: RootComponent,
+    notFoundComponent: NotFoundComponent,
+    errorComponent: ErrorComponent,
+  });
 
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
