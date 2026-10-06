@@ -22,11 +22,31 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Suhina · Reparación de latiguillos hidráulicos en Navarra · 24/7" },
+      {
+        title: "Suhina.es · Reparación de latiguillos hidráulicos en Navarra · 24/7",
+      },
       {
         name: "description",
         content:
           "Reparación y fabricación de latiguillos hidráulicos a pie de máquina en toda Navarra. Servicio 24/7, respuesta en menos de 30 min.",
+      },
+    ],
+    links: [
+      {
+        rel: "canonical",
+        href: "https://www.suhina.es/",
+      },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "Suhina.es",
+          alternateName: "Suhina",
+          url: "https://www.suhina.es/",
+        }),
       },
     ],
   }),
