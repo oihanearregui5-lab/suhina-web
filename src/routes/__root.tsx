@@ -1,4 +1,5 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
 import {
   Outlet,
   Link,
@@ -87,7 +88,7 @@ export const Route =
         },
         {
           title:
-            "Suhina · Reparación de latiguillos hidráulicos en Navarra · 24/7",
+            "Suhina.es · Reparación de latiguillos hidráulicos en Navarra · 24/7",
         },
         {
           name: "description",
@@ -95,10 +96,12 @@ export const Route =
             "Reparación y fabricación de latiguillos hidráulicos a pie de máquina en toda Navarra. Servicio 24/7, respuesta en menos de 30 min.",
         },
         { name: "author", content: "Suhina" },
+
+        // Open Graph
         {
           property: "og:title",
           content:
-            "Suhina · Reparación de latiguillos hidráulicos en Navarra · 24/7",
+            "Suhina.es · Reparación de latiguillos hidráulicos en Navarra · 24/7",
         },
         {
           property: "og:description",
@@ -106,17 +109,19 @@ export const Route =
             "Reparación y fabricación de latiguillos hidráulicos a pie de máquina en toda Navarra. Servicio 24/7, respuesta en menos de 30 min.",
         },
         { property: "og:type", content: "website" },
-        { property: "og:url", content: "https://suhina.es" },
+        { property: "og:url", content: "https://suhina.es/" },
         {
           property: "og:image",
           content: "https://suhina.es/og-image.jpg",
         },
         { property: "og:locale", content: "es_ES" },
+
+        // Twitter / X
         { name: "twitter:card", content: "summary_large_image" },
         {
           name: "twitter:title",
           content:
-            "Suhina · Reparación de latiguillos hidráulicos en Navarra · 24/7",
+            "Suhina.es · Reparación de latiguillos hidráulicos en Navarra · 24/7",
         },
         {
           name: "twitter:description",
@@ -128,12 +133,31 @@ export const Route =
           content: "https://suhina.es/og-image.jpg",
         },
       ],
+
       links: [
         {
           rel: "stylesheet",
           href: appCss,
         },
-        { rel: "icon", href: "/favicon.ico", sizes: "any" },
+
+        // Canonical
+        {
+          rel: "canonical",
+          href: "https://suhina.es/",
+        },
+
+        // Favicons
+        {
+          rel: "icon",
+          href: "/favicon.ico",
+          sizes: "any",
+        },
+        {
+          rel: "icon",
+          type: "image/png",
+          sizes: "16x16",
+          href: "/favicon-16x16.png",
+        },
         {
           rel: "icon",
           type: "image/png",
@@ -147,18 +171,27 @@ export const Route =
           href: "/favicon-48x48.png",
         },
         {
-          rel: "icon",
-          type: "image/png",
-          sizes: "16x16",
-          href: "/favicon-16x16.png",
-        },
-        {
           rel: "apple-touch-icon",
           sizes: "180x180",
           href: "/apple-touch-icon.png",
         },
       ],
+
+      // Structured data for Google
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "Suhina.es",
+            alternateName: "Suhina",
+            url: "https://suhina.es/",
+          }),
+        },
+      ],
     }),
+
     shellComponent: RootShell,
     component: RootComponent,
     notFoundComponent: NotFoundComponent,
