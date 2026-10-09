@@ -109,10 +109,10 @@ export const Route =
             "Reparación y fabricación de latiguillos hidráulicos a pie de máquina en toda Navarra. Servicio 24/7, respuesta en menos de 30 min.",
         },
         { property: "og:type", content: "website" },
-        { property: "og:url", content: "https://suhina.es/" },
+        { property: "og:url", content: "https://www.suhina.es/" },
         {
           property: "og:image",
-          content: "https://suhina.es/og-image.jpg",
+          content: "https://www.suhina.es/og-image.jpg",
         },
         { property: "og:locale", content: "es_ES" },
 
@@ -130,7 +130,7 @@ export const Route =
         },
         {
           name: "twitter:image",
-          content: "https://suhina.es/og-image.jpg",
+          content: "https://www.suhina.es/og-image.jpg",
         },
       ],
 
@@ -138,12 +138,6 @@ export const Route =
         {
           rel: "stylesheet",
           href: appCss,
-        },
-
-        // Canonical
-        {
-          rel: "canonical",
-          href: "https://suhina.es/",
         },
 
         // Favicons
@@ -177,19 +171,6 @@ export const Route =
         },
       ],
 
-      // Structured data for Google
-      scripts: [
-        {
-          type: "application/ld+json",
-          children: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            name: "Suhina.es",
-            alternateName: "Suhina",
-            url: "https://suhina.es/",
-          }),
-        },
-      ],
     }),
 
     shellComponent: RootShell,
