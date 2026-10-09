@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://suhina.es/sitemap.xml
+Sitemap: https://www.suhina.es/sitemap.xml
