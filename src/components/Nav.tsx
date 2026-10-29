@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { Menu, Phone, X } from "lucide-react";
 
 const links = [
@@ -18,6 +19,19 @@ export function Nav() {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  // Bloquea el scroll de la página mientras el menú móvil está abierto
+  useEffect(() => {
+    if (!open) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = prev;
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [open]);
 
   return (
     <header
@@ -61,8 +75,15 @@ export function Nav() {
         </div>
       </div>
 
-      {open && (
-        <div className="fixed inset-0 z-[60] bg-anthracite-deep flex flex-col">
+      {/* El menú se monta en <body> con un portal: el backdrop-blur del header
+          convierte al header en el bloque contenedor de los "fixed" en móvil,
+          y el overlay quedaba recortado/transparente sobre la web. */}
+      {open && typeof document !== "undefined" && createPortal(
+        <div
+          role="dialog"
+          aria-modal="true"
+          className="fixed inset-0 z-[100] h-[100dvh] bg-anthracite-deep flex flex-col overflow-y-auto"
+        >
           <div className="flex items-center justify-between px-6 h-18 py-4 border-b border-white/10">
             <div className="flex items-center gap-3">
               <SunGear className="h-8 w-8 text-suhina-yellow" />
@@ -91,7 +112,8 @@ export function Nav() {
               <Phone className="h-4 w-4" /> 678 47 84 92
             </a>
           </nav>
-        </div>
+        </div>,
+        document.body,
       )}
     </header>
   );
