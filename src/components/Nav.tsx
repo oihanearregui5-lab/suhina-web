@@ -42,7 +42,8 @@ export function Nav() {
       }`}
     >
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10 h-18 flex items-center justify-between py-4">
-        <a href="#inicio" className="flex items-center group">
+        <a href="#inicio" className="flex items-center gap-3 group">
+          <img src="/logo-suhina.png" alt="" width={36} height={36} className="h-9 w-9" />
           <span className="display text-2xl tracking-wide text-white">
             SUHI<span className="text-suhina-yellow">NA</span>
           </span>
@@ -86,8 +87,10 @@ export function Nav() {
         >
           <div className="flex items-center justify-between px-6 h-18 py-4 border-b border-white/10">
             <div className="flex items-center gap-3">
-              <SunGear className="h-8 w-8 text-suhina-yellow" />
-              <span className="display text-xl text-white">SUHINA</span>
+              <img src="/logo-suhina.png" alt="" width={36} height={36} className="h-9 w-9" />
+              <span className="display text-2xl tracking-wide text-white">
+                SUHI<span className="text-suhina-yellow">NA</span>
+              </span>
             </div>
             <button onClick={() => setOpen(false)} className="text-white p-2" aria-label="Cerrar">
               <X className="h-6 w-6" />
